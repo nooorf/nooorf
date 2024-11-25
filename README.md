@@ -9,7 +9,7 @@
 
 - 👨‍💻 All of my projects are available at [https://nooorf.github.io](https://nooorf.github.io)
 
-- 💬 Ask me about **Spring Boot, Java, Web Sockets, Artifial**
+- 💬 Ask me about **Spring Boot, Java, Web Sockets**
 
 - 📫 How to reach me **nfatima.bscs23seecs@seecs.edu.pk**
 
