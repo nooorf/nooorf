@@ -3,17 +3,15 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nooorf&label=Profile%20views&color=0e75b6&style=flat" alt="nooorf" /> </p>
 
-- 🔭 I’m currently working on **Dudo Project**
-
-- 🌱 I’m currently learning **React, Angular, Express, Django**
+- 🌱 I’m currently learning **Express, Django**
 
 - 👨‍💻 All of my projects are available at [https://nooorf.github.io](https://nooorf.github.io)
 
-- 💬 Ask me about **Spring Boot, Java, Web Sockets**
+- 💬 Ask me about **React, JavaScript, Spring Boot, Java, Web Sockets**
 
 - 📫 How to reach me **nfatima.bscs23seecs@seecs.edu.pk**
 
-- 📄 Know about my experiences [https://pk.linkedin.com/in/noor-fatima-aa07632a1](https://pk.linkedin.com/in/noor-fatima-aa07632a1)
+- 📄 Know about my experiences [www.linkedin.com/in/noorfatima4428](www.linkedin.com/in/noorfatima4428)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
