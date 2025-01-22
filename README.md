@@ -11,7 +11,7 @@
 
 - 📫 How to reach me **nfatima.bscs23seecs@seecs.edu.pk**
 
-- 📄 Know about my experiences [www.linkedin.com/in/noorfatima4428](www.linkedin.com/in/noorfatima4428)
+- 📄 Know about my experiences [https://www.linkedin.com/in/noorfatima4428/](https://www.linkedin.com/in/noorfatima4428/)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
