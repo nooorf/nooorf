@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Noor Fatima</h1>
-<h3 align="center">A passionate software developer from Kashmir!</h3>
+<h3 align="center">A full stack developer</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nooorf&label=Profile%20views&color=0e75b6&style=flat" alt="nooorf" /> </p>
 
 - 🌱 I’m currently learning **Flutter**
 
-- 👨‍💻 Learn more about me at [[https://nooorf.github.io](https://nooorf.github.io)](https://nooorf.github.io/github-portfolio/)
+- 👨‍💻 Learn more about me at (https://nooorf.github.io/github-portfolio/)
 
 - 💬 Ask me about **Next.Js, Express.Js, React, JavaScript, Java, C++, MongoDB**
 
