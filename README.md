@@ -3,11 +3,11 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nooorf&label=Profile%20views&color=0e75b6&style=flat" alt="nooorf" /> </p>
 
-- 🌱 I’m currently learning **Express, Django**
+- 🌱 I’m currently learning **Flutter**
 
 - 👨‍💻 All of my projects are available at [https://nooorf.github.io](https://nooorf.github.io)
 
-- 💬 Ask me about **React, JavaScript, Spring Boot, Java, Web Sockets**
+- 💬 Ask me about **Next.Js, Express.Js, React, JavaScript, Java, C++, MongoDB**
 
 - 📫 How to reach me **nfatima.bscs23seecs@seecs.edu.pk**
 
