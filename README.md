@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **Flutter**
 
-- 👨‍💻 All of my projects are available at [https://nooorf.github.io](https://nooorf.github.io)
+- 👨‍💻 Learn more about me at [[https://nooorf.github.io](https://nooorf.github.io)](https://nooorf.github.io/github-portfolio/)
 
 - 💬 Ask me about **Next.Js, Express.Js, React, JavaScript, Java, C++, MongoDB**
 
