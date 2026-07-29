@@ -3,12 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=nooorf&label=Profile%20views&color=0e75b6&style=flat" alt="nooorf" /> </p>
 
-- 🌱 I’m currently learning **Flutter**
-
-- 👨‍💻 Learn more about me at (https://nooorf.github.io/github-portfolio/)
-
-- 💬 Ask me about **Next.Js, Express.Js, React, JavaScript, Java, C++, MongoDB**
-
 - 📫 How to reach me **nfatima.bscs23seecs@seecs.edu.pk**
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/noorfatima4428/](https://www.linkedin.com/in/noorfatima4428/)
