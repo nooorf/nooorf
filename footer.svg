@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="120" viewBox="0 0 1000 120" fill="none">
+<style>@keyframes d0{0%,100%{transform:translate(0,0)}50%{transform:translate(-35px,20px)}}.o0{animation:d0 9s ease-in-out infinite}@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-25px)}}.o1{animation:d1 11s ease-in-out infinite}@keyframes p{0%,100%{opacity:.35}50%{opacity:1}}.p{animation:p 1.8s ease-in-out infinite}.p2{animation-delay:.3s}.p3{animation-delay:.6s}</style>
+<defs>
+  <clipPath id="clip"><rect width="1000" height="120" rx="24"/></clipPath>
+  <filter id="blur" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="65"/></filter>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.12"/>
+  </linearGradient>
+  <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset="0.3" stop-color="#22D3EE" stop-opacity="0.6"/><stop offset="0.7" stop-color="#8B5CF6" stop-opacity="0.6"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient>
+</defs>
+<g clip-path="url(#clip)">
+  <rect width="1000" height="120" fill="#090A14"/>
+  <g filter="url(#blur)"><circle class="o0" cx="300" cy="150" r="120" fill="#0E7490" opacity="0.3"/><circle class="o1" cx="700" cy="150" r="120" fill="#6D28D9" opacity="0.3"/></g>
+  
+</g>
+<rect x="0.75" y="0.75" width="998.5" height="118.5" rx="23.5" stroke="url(#edge)" stroke-width="1.5"/>
+
+<circle class="p" cx="484.0" cy="44" r="3.5" fill="#22D3EE"/>
+<circle class="p p2" cx="500.0" cy="44" r="3.5" fill="#8B5CF6"/>
+<circle class="p p3" cx="516.0" cy="44" r="3.5" fill="#EC4899"/>
+<text x="500.0" y="76" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4.5"
+  fill="#94A3B8" fill-opacity="0.8">noor fatima  ·  research-grade models, production-grade systems</text>
+<rect x="60" y="106" width="880" height="1.5" fill="url(#line)"/>
+
+</svg>

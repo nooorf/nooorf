@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="96" viewBox="0 0 1000 96" fill="none">
+<defs><linearGradient id="fl" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE" stop-opacity="0"/><stop offset="1" stop-color="#22D3EE"/></linearGradient><linearGradient id="fr" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient></defs>
+<rect x="149.3" y="43.25" width="190" height="1.5" fill="url(#fl)"/>
+<rect x="660.7" y="43.25" width="190" height="1.5" fill="url(#fr)"/>
+<circle cx="343.3" cy="44" r="3" fill="#22D3EE"/><circle cx="656.7" cy="44" r="3" fill="#8B5CF6"/>
+<text x="503.5" y="49" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="7" fill="#22D3EE" fill-opacity="0.85">GITHUB ANALYTICS</text>
+<text x="500.0" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#94A3B8">Contributions, languages and activity</text>
+</svg>
