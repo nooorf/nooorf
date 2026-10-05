@@ -12,6 +12,7 @@ architecture:    deep-learning × systems-engineering
 trained_on:      [deep learning, LLM systems, multimodal AI,
                   distributed training, privacy-preserving ML]
 inference:       research → prototype → production
+serving_layer:   full-stack web · React · TypeScript · FastAPI · WebSockets
 fine_tuning_on:  SpatioArchitect · satellite image + one sentence → 3D house
 license:         open-to-opportunities
 ```
@@ -301,6 +302,7 @@ license:         open-to-opportunities
 
 <!-- ═════════════════════════ FOOTER ═════════════════════════ -->
 <p align="center">
+  <a href="https://portfolio-nooorfs-projects.vercel.app/"><img src="btn-portfolio.svg" height="50" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/noorfatima4428/"><img src="btn-linkedin.svg" height="50" alt="LinkedIn"/></a>
   <a href="mailto:nfatima.bscs23seecs@seecs.edu.pk"><img src="btn-email.svg" height="50" alt="Email"/></a>
 </p>
