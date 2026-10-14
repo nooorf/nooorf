@@ -2,7 +2,7 @@
 <p align="center"><a><img src="hero.svg" width="100%" alt="Noor Fatima — AI / ML Engineer"/></a></p>
 
 <!-- ═════════════════════════ ABOUT ═════════════════════════ -->
-<p align="center"><a><img src="about.svg" width="100%" alt="About — Computer Science undergraduate at NUST (CGPA 3.88/4.0, Dean's List 6/6 semesters, merit scholar) building machine learning systems end-to-end, with a co-authored IEEE GLOBECOM 2026 workshop paper"/></a></p>
+<p align="center"><a><img src="about.svg" width="100%" alt="About — Computer Science undergraduate at NUST (CGPA 3.88/4.0, Dean's List 6/6 semesters, merit scholar) building machine learning systems end-to-end"/></a></p>
 
 ```yaml
 # ── model_card.yaml ──────────────────────────────────────────────
@@ -12,7 +12,6 @@ pipeline_tag:    ai-ml-engineering
 architecture:    deep-learning × systems-engineering
 trained_on:      [LLM & RAG systems, MLOps, deep learning, multimodal AI,
                   federated learning, deep reinforcement learning]
-eval_results:    IEEE GLOBECOM 2026 Workshop paper (co-author)
 inference:       research → prototype → production
 serving_layer:   FastAPI · React · TypeScript · WebSockets · Docker
 fine_tuning_on:  SpatioArchitect · satellite image + one sentence → 3D house
@@ -21,9 +20,6 @@ license:         open-to-opportunities
 
 <!-- ═════════════════════════ EXPERIENCE ═════════════════════════ -->
 <p align="center"><a><img src="experience.svg" width="100%" alt="Experience: AI/ML Intern at Nexus Technologies (Feb–Apr 2026, RAG-based conversational AI); Frontend Developer at Growthrune (Apr 2025–Feb 2026, led code reviews, real-time agentic AI features, 25% faster page load); Web Designer and Developer at Moboroid (May 2021–Jun 2023, 7+ client projects)"/></a></p>
-
-<!-- ═════════════════════════ RESEARCH ═════════════════════════ -->
-<p align="center"><a><img src="research.svg" width="100%" alt="Research and publications: co-author of 'RIS-Assisted Physical Layer Security for PASS-Enabled Backscatter NOMA Systems', IEEE GLOBECOM 2026 Workshop; Student Researcher at IPT Lab, NUST, developing deep reinforcement learning for RIS-assisted backscatter NOMA, raising spatial feasibility from 73.2% to 98.4% across 441 eavesdropper locations; co-author of a DAWN News data analysis of smog in Pakistan"/></a></p>
 
 <!-- ═════════════════════════ TECH STACK ═════════════════════════ -->
 <p align="center"><a><img src="stack.svg" width="100%" alt="Tech stack. Languages: Python, C++, SQL, TypeScript, JavaScript, Java. ML and DL: PyTorch, TensorFlow, scikit-learn, XGBoost, MONAI, OpenCV, SHAP, Stable-Baselines3, Gymnasium. LLMs and retrieval: Hugging Face Transformers, Sentence Transformers, Ollama, pgvector. MLOps and cloud: Docker, GitHub Actions, MLflow, Weights and Biases, Evidently, Azure ML, Git, Linux. Data and streaming: pandas, NumPy, SciPy, PostgreSQL, SQLAlchemy, Apache Spark, Apache Kafka, RAPIDS, Delta Lake, GeoPandas. Backend and web: FastAPI, Node.js, WebSockets, React, Material-UI, three.js, Streamlit"/></a></p>
