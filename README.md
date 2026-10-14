@@ -2,72 +2,141 @@
 <p align="center"><a><img src="hero.svg" width="100%" alt="Noor Fatima — AI / ML Engineer"/></a></p>
 
 <!-- ═════════════════════════ ABOUT ═════════════════════════ -->
-<p align="center"><a><img src="about.svg" width="100%" alt="About — building intelligent systems at the intersection of deep learning and systems engineering"/></a></p>
+<p align="center"><a><img src="about.svg" width="100%" alt="About — Computer Science undergraduate at NUST (CGPA 3.88/4.0, Dean's List 6/6 semesters, merit scholar) building machine learning systems end-to-end"/></a></p>
 
 ```yaml
 # ── model_card.yaml ──────────────────────────────────────────────
 model_id:        noor-fatima
+base_model:      BS Computer Science · NUST · CGPA 3.88/4.0 · Dean's List 6/6
 pipeline_tag:    ai-ml-engineering
 architecture:    deep-learning × systems-engineering
-trained_on:      [deep learning, LLM systems, multimodal AI,
-                  distributed training, privacy-preserving ML]
+trained_on:      [LLM & RAG systems, MLOps, deep learning, multimodal AI,
+                  federated learning, deep reinforcement learning]
 inference:       research → prototype → production
-serving_layer:   full-stack web · React · TypeScript · FastAPI · WebSockets
+serving_layer:   FastAPI · React · TypeScript · WebSockets · Docker
 fine_tuning_on:  SpatioArchitect · satellite image + one sentence → 3D house
 license:         open-to-opportunities
 ```
 
+<!-- ═════════════════════════ EXPERIENCE ═════════════════════════ -->
+<p align="center"><a><img src="experience.svg" width="100%" alt="Experience: AI/ML Intern at Nexus Technologies (Feb–Apr 2026, RAG-based conversational AI); Frontend Developer at Growthrune (Apr 2025–Feb 2026, led code reviews, real-time agentic AI features, 25% faster page load); Web Designer and Developer at Moboroid (May 2021–Jun 2023, 7+ client projects)"/></a></p>
+
 <!-- ═════════════════════════ TECH STACK ═════════════════════════ -->
-<p align="center"><a><img src="stack.svg" width="100%" alt="Tech stack: Python, PyTorch, TensorFlow, scikit-learn, MONAI, OpenCV, Spark, Kafka, RAPIDS, Delta Lake, Pandas, NumPy, GeoPandas, SHAP, Streamlit, W&B, Docker, Git, Linux, C++, Java"/></a></p>
+<p align="center"><a><img src="stack.svg" width="100%" alt="Tech stack. Languages: Python, C++, SQL, TypeScript, JavaScript, Java. ML and DL: PyTorch, TensorFlow, scikit-learn, XGBoost, MONAI, OpenCV, SHAP, Stable-Baselines3, Gymnasium. LLMs and retrieval: Hugging Face Transformers, Sentence Transformers, Ollama, pgvector. MLOps and cloud: Docker, GitHub Actions, MLflow, Weights and Biases, Evidently, Azure ML, Git, Linux. Data and streaming: pandas, NumPy, SciPy, PostgreSQL, SQLAlchemy, Apache Spark, Apache Kafka, RAPIDS, Delta Lake, GeoPandas. Backend and web: FastAPI, Node.js, WebSockets, React, Material-UI, three.js, Streamlit"/></a></p>
 
 <!-- ═════════════════════════ FEATURED WORK ═════════════════════════ -->
 <p align="center"><a><img src="section-featured.svg" width="100%" alt="Featured Work"/></a></p>
 
 <details>
-<summary><b>🫀 CortexPI &nbsp;—&nbsp; Federated ICU Deterioration Intelligence</b></summary>
+<summary><b>Shelfwise &nbsp;—&nbsp; Conversational, Voice-First Library AI Assistant</b></summary>
 <br>
 
-> **A real-time, privacy-preserving clinical AI platform that predicts ICU patient deterioration across distributed hospital nodes — without a single patient record ever leaving its source hospital.** Engineered end-to-end across streaming data infrastructure, custom GPU kernels, state-of-the-art sequence models and federated optimization.
+> **A voice-first library assistant with a talking avatar that recommends books by mood, pace and what to leave out — answering only from the library's own shelves, and structurally unable to invent a book.** Hybrid retrieval, an LLM query parser and ID-constrained generation over 5,358 real books, all running locally on an 8 GB laptop with zero paid APIs.
 
 ```text
-┌──────────────────────────────────────────────────────────────────────────────────┐
-│                         CortexPI  ·  System Architecture                         │
-├──────────────────────────┬──────────────────────────┬────────────────────────────┤
-│     STREAM INGESTION     │  GPU STREAM PROCESSING   │     FEDERATED TRAINING     │
-│                          │                          │                            │
-│  Apache Kafka            │  RAPIDS cuDF + Spark     │  FedAvg + Differential     │
-│  exactly-once semantics  │  Structured Streaming    │  Privacy · 5 hospital      │
-│  live vitals + ECG feeds │  Delta Lake lakehouse    │  nodes · torchrun 2×T4     │
-├──────────────────────────┴──────────────────────────┴────────────────────────────┤
-│                                DEEP LEARNING CORE                                │
-│                                                                                  │
-│      Mamba SSM ECG Encoder  ·  GRU-D Vitals Encoder  ·  Graph Attention Net      │
-│         Custom Triton Pan-Tompkins GPU Kernel  ·  EWC Continual Learning         │
-│               Conformal Prediction  ·  3 Clinical Prediction Heads               │
-├──────────────────────────────────────────────────────────────────────────────────┤
-│      OUTPUT → real-time deterioration risk + calibrated uncertainty bounds       │
-├──────────────────────────────────────────────────────────────────────────────────┤
-│  Data: PhysioNet 2012 · PTB-XL        Compute: Apple M2 Pro · Kaggle dual-T4     │
-└──────────────────────────────────────────────────────────────────────────────────┘
+                 Voice  (Whisper + Silero VAD)   ·   or typed text
+                                          │
+                                          ▼
+                  ┌───────────────────────────────────────────────┐
+                  │                  QUERY PARSER                 │
+                  │       Qwen3-4B (local) · rules fallback       │
+                  │     hard constraints · soft prefs · topic     │
+                  └───────────────────────┬───────────────────────┘
+                                          ▼
+                  ┌───────────────────────────────────────────────┐
+                  │          FILTER FIRST · ONE SQL QUERY         │
+                  │  page limits · on shelf today · "not" facets  │
+                  │     → allowed set: a guarantee, not a hint    │
+                  └───────────────────────┬───────────────────────┘
+              ┌───────────────────────────┼───────────────────────────┐
+              ▼                           ▼                           ▼
+    ┌───────────────────┐       ┌───────────────────┐       ┌───────────────────┐
+    │        BM25       │       │   Dense bge-base  │       │   Exact lookups   │
+    │   lexical signal  │       │   meaning · mood  │       │   title · author  │
+    └─────────┬─────────┘       └─────────┬─────────┘       └─────────┬─────────┘
+              └───────────────────────────┼───────────────────────────┘
+                                          ▼
+                  ┌───────────────────────────────────────────────┐
+                  │          HYBRID FUSION + FACET NUDGES         │
+                  │       scored only inside the allowed set      │
+                  │             mood · pace · audience            │
+                  └───────────────────────┬───────────────────────┘
+                                          ▼
+                  ┌───────────────────────────────────────────────┐
+                  │               GROUNDED NARRATION              │
+                  │      LLM may only cite retrieved book IDs     │
+                  │        validator checks every sentence        │
+                  └───────────────────────┬───────────────────────┘
+                                          ▼
+    Kokoro streaming TTS  →  VRM avatar lip-sync   ·   web UI chips + inspector
+
+  ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+    Offline: 5,358-work catalog → LLM facet tagging · bge embeddings · BM25 index
 ```
 
-**⚡ Highlights**
+**Highlights**
 
-- **Mamba state-space ECG encoder** for long-range cardiac sequence modeling — outperforms LSTM baselines on irregular clinical time series
-- **GRU-D vitals encoder** with learned missingness decay, built for the extreme sparsity of real ICU data
-- **Custom Triton GPU kernel** running Pan-Tompkins QRS detection fully on-GPU — zero CPU round-trips
-- **FedAvg + Differential Privacy** across 5 hospital nodes with formal (ε, δ) privacy guarantees
-- **Graph Attention Network** modeling relational structure across clinical signals, driving **3 clinical prediction heads**
-- **EWC continual learning** that defends against catastrophic forgetting as patient populations drift
-- **Conformal prediction** wrapping every risk score in calibrated, distribution-free uncertainty bounds
-- **2-GPU pipeline parallelism** via `torchrun` on dual-T4 infrastructure, fed by an exactly-once Kafka → Spark → Delta Lake stream
+- **0.687 nDCG@10** on a locked test split — **+14%** over BM25 + dense hybrid search and **+58%** over BM25
+- **0% invented books across 150 adversarial cases** (made-up titles, prompt injection) via ID-constrained generation + a sentence validator — versus **21%** for naive RAG and **77%** for an LLM alone
+- **Qwen3-4B query parser at 95.0% F1** (98% precision), splitting each request into hard constraints, soft preferences and a topic, with a deterministic rules fallback
+- **Facet-based negation** — "without the romance" becomes a filter, not a vector drifting *towards* romance — **halving constraint violations from 62% to 31%** and ranking **2.2× better** on "not" requests
+- **Filter-first retrieval** — every constraint compiles into one SQL query, and every retrieval channel scores only inside that allowed set
+- **Local voice assistant** — Whisper + Silero VAD in, streaming Kokoro TTS out with barge-in interruption, and a three.js VRM avatar at **59 FPS**, **4 ms median lip-sync offset** and **0.73 s first frame**
+- **Research-grade evaluation** — **12,331 graded relevance judgments** with TREC-style pooling, paraphrase-separated dev/test splits to prevent leakage, and paired bootstrap confidence intervals
 
-**Stack** &nbsp; `PyTorch` · `Mamba SSM` · `Triton` · `RAPIDS cuDF` · `Apache Spark` · `Apache Kafka` · `Delta Lake` · `Federated Learning`
+**Stack** &nbsp; `Python` · `FastAPI` · `WebSockets` · `PostgreSQL + pgvector` · `bge-base` · `BM25` · `Qwen3-4B (Ollama)` · `Whisper` · `Kokoro TTS` · `React` · `three.js`
+
+**Code** &nbsp; [github.com/nooorf/shelfwise](https://github.com/nooorf/shelfwise)
 
 </details>
 
 <details>
-<summary><b>🔎 AcademIQ &nbsp;—&nbsp; Evidence-Grounded AI Search Engine</b></summary>
+<summary><b>Sentinel &nbsp;—&nbsp; Real-Time Fraud Detection & MLOps Platform</b></summary>
+<br>
+
+> **An end-to-end ML system for card fraud that watches itself: a sub-10 ms scoring API, drift monitoring that triggers its own retraining, and a model registry that only promotes a candidate once it beats the serving model.** Shipped as a single Docker container with a fraud-operations console.
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                         Sentinel  ·  System Architecture                         │
+├──────────────────────────┬──────────────────────────┬────────────────────────────┤
+│     OFFLINE TRAINING     │     SCORING SERVICE      │      DRIFT MONITORING      │
+│                          │                          │                            │
+│  time-ordered 60/20/20   │  FastAPI  POST /predict  │  every scored txn logged   │
+│  LR · XGBoost · IForest  │    strict Pydantic v2    │  Evidently feature drift   │
+│   cost-aware threshold   │  9.7 ms p99 · 260 req/s  │     + prediction drift     │
+├──────────────────────────┴──────────────────────────┴────────────────────────────┤
+│                 RETRAINING  ·  MODEL REGISTRY  ·  PROMOTION GATE                 │
+│                                                                                  │
+│      drift alert → background retrain → candidate vs. serving on one split       │
+│     promote (hot swap, no restart)  ·  reject (kept for audit)  ·  rollback      │
+│             SHA-256 manifest verified before every load or promotion             │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│      OUTPUT → APPROVE / REVIEW decision · fraud probability · anomaly rank       │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│    Ops console · MLflow · 42 tests · GitHub Actions CI · one Docker container    │
+│      Data: 284,807 card txns · 0.17% fraud      Deploy: Azure ML blue/green      │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Highlights**
+
+- **9.7 ms p99 end-to-end latency** and **260 requests/s** on a laptop, scoring with XGBoost + Isolation Forest over **284K** real card transactions
+- **Precision 0.41 → 0.54** at the same recall target — **46% fewer false alarms**, **31% fewer manual reviews** and **62% lower fraud cost**, measured on a held-out, time-ordered test window
+- **Leakage-free by construction** — chronological 60/20/20 split, preprocessing fit on training data only, test set scored exactly once, bootstrap confidence intervals on every metric
+- **Built for 0.17% fraud prevalence** — imbalance-aware XGBoost, PR-AUC model selection and a cost-aware decision threshold
+- **Self-healing MLOps loop** — Evidently drift monitoring triggers background retraining; a promotion gate checks precision/recall floors and PR-AUC before a zero-downtime hot swap, with one-click rollback
+- **Tamper-evident model versioning** — every artifact carries a SHA-256 manifest verified before each load or promotion
+- **Production engineering** — 42 automated tests, GitHub Actions CI, MLflow tracking, and Azure ML managed-endpoint deployment scripts with blue/green slots
+
+**Stack** &nbsp; `XGBoost` · `scikit-learn` · `Evidently` · `FastAPI` · `Pydantic v2` · `MLflow` · `Docker` · `GitHub Actions` · `Azure ML`
+
+**Code** &nbsp; [github.com/nooorf/sentinel](https://github.com/nooorf/sentinel)
+
+</details>
+
+<details>
+<summary><b>AcademIQ &nbsp;—&nbsp; Evidence-Grounded AI Search Engine</b></summary>
 <br>
 
 > **A production-grade Big Data retrieval and question-answering engine that turns dense university policy handbooks into a fast, auditable natural-language knowledge system.** Fuses approximate similarity search, multi-stage ranking, distributed indexing, query mining and grounded LLM synthesis — every answer ships with its source, section and page.
@@ -106,7 +175,7 @@ license:         open-to-opportunities
     Offline: MapReduce-parallel index builds  ·  SON frequent-pattern mining
 ```
 
-**⚡ Highlights**
+**Highlights**
 
 - **7× faster retrieval** than exact TF-IDF — while **recovering +6 pp precision** through hybrid retrieval and re-ranking
 - **54 ms retrieval at 10× corpus scale** — approximate search held firmly in the sub-100 ms regime
@@ -121,7 +190,51 @@ license:         open-to-opportunities
 </details>
 
 <details>
-<summary><b>🧠 3D Brain Tumor Segmentation &nbsp;—&nbsp; Multi-Modal MRI · MONAI 3D U-Net</b></summary>
+<summary><b>CortexPI &nbsp;—&nbsp; Federated Learning for ICU Sepsis Detection</b></summary>
+<br>
+
+> **A real-time, privacy-preserving clinical AI platform that predicts ICU patient deterioration across distributed hospital nodes — without a single patient record ever leaving its source hospital.** Engineered end-to-end across streaming data infrastructure, custom GPU kernels, state-of-the-art sequence models and federated optimization.
+
+```text
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                         CortexPI  ·  System Architecture                         │
+├──────────────────────────┬──────────────────────────┬────────────────────────────┤
+│     STREAM INGESTION     │  GPU STREAM PROCESSING   │     FEDERATED TRAINING     │
+│                          │                          │                            │
+│  Apache Kafka            │  RAPIDS cuDF + Spark     │  FedAvg + Differential     │
+│  exactly-once semantics  │  Structured Streaming    │  Privacy · 5 hospital      │
+│  live vitals + ECG feeds │  Delta Lake lakehouse    │  nodes · torchrun 2×T4     │
+├──────────────────────────┴──────────────────────────┴────────────────────────────┤
+│                                DEEP LEARNING CORE                                │
+│                                                                                  │
+│      Mamba SSM ECG Encoder  ·  GRU-D Vitals Encoder  ·  Graph Attention Net      │
+│         Custom Triton Pan-Tompkins GPU Kernel  ·  EWC Continual Learning         │
+│               Conformal Prediction  ·  3 Clinical Prediction Heads               │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│      OUTPUT → real-time deterioration risk + calibrated uncertainty bounds       │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│  Data: PhysioNet 2012 · PTB-XL        Compute: Apple M2 Pro · Kaggle dual-T4     │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Highlights**
+
+- **Mamba state-space ECG encoder** for long-range cardiac sequence modeling — outperforms LSTM baselines on irregular clinical time series
+- **GRU-D vitals encoder** with learned missingness decay, built for the extreme sparsity of real ICU data
+- **Custom Triton GPU kernel** running Pan-Tompkins QRS detection fully on-GPU — ECG preprocessing benchmarked at **2,400 ms → 31 ms (77× speedup)**
+- **FedAvg + Differential Privacy** across 5 hospital nodes with formal (ε, δ) privacy guarantees
+- **Graph Attention Network** modeling relational structure across clinical signals, driving **3 clinical prediction heads**
+- **EWC continual learning** that defends against catastrophic forgetting as patient populations drift
+- **Conformal prediction** wrapping every risk score in calibrated, distribution-free uncertainty bounds
+- **2-GPU pipeline parallelism** via `torchrun` on dual-T4 infrastructure, fed by an exactly-once Kafka → Spark → Delta Lake stream
+- **Distributed GPU inference** with parallel execution, targeting **sub-100 ms per-patient latency** across the streaming architecture
+
+**Stack** &nbsp; `PyTorch` · `Mamba SSM` · `Triton` · `RAPIDS cuDF` · `Apache Spark` · `Apache Kafka` · `Delta Lake` · `Federated Learning`
+
+</details>
+
+<details>
+<summary><b>3D Brain Tumor Segmentation &nbsp;—&nbsp; Multi-Modal MRI · MONAI 3D U-Net</b></summary>
 <br>
 
 > **A volumetric deep-learning pipeline that fuses four complementary MRI sequences — T1, T1ce, T2 and FLAIR — to deliver voxel-precise, multi-class brain tumor segmentation with a compact MONAI 3D U-Net.**
@@ -159,7 +272,7 @@ license:         open-to-opportunities
     └───────────────────────────────────┘
 ```
 
-**⚡ Highlights**
+**Highlights**
 
 - **0.6479 mean validation Dice** across **55 held-out patients**
 - **0.7652 Dice on Enhancing Tumor** — the clinically critical sub-region and the model's strongest class
@@ -170,10 +283,12 @@ license:         open-to-opportunities
 
 **Stack** &nbsp; `PyTorch` · `MONAI` · `3D U-Net` · `BraTS 2020` · `Weights & Biases`
 
+**Code** &nbsp; [github.com/nooorf/brain-tumor-segmentation](https://github.com/nooorf/brain-tumor-segmentation)
+
 </details>
 
 <details>
-<summary><b>🏙️ London Crime Predictive Intelligence &nbsp;—&nbsp; Geospatial Risk Engine</b></summary>
+<summary><b>London Crime Predictive Intelligence &nbsp;—&nbsp; Geospatial Risk Engine</b></summary>
 <br>
 
 > **A city-scale geospatial intelligence platform that forecasts crime risk across every London neighbourhood (LSOA)** — fusing census, socio-economic, POI and temporal signals into an ensemble ML engine, explained with SHAP and rendered as an interactive **3D digital twin** with live what-if policy simulation.
@@ -213,7 +328,7 @@ license:         open-to-opportunities
                  └───────────────────────────────────────┘
 ```
 
-**⚡ Highlights**
+**Highlights**
 
 - **83% accuracy** classifying Low / Medium / High risk with XGBoost
 - **0.95 R²** on continuous risk-score regression with a Random Forest ensemble
@@ -227,10 +342,10 @@ license:         open-to-opportunities
 </details>
 
 <details>
-<summary><b>🏗️ SpatioArchitect &nbsp;—&nbsp; Satellite Image + One Sentence → Walkable 3D House</b></summary>
+<summary><b>SpatioArchitect &nbsp;—&nbsp; Satellite Image + One Sentence → Walkable 3D House</b></summary>
 <br>
 
-**🚧 In Progress &nbsp;·&nbsp; Final Year Project &nbsp;·&nbsp; 3-person team**
+**In progress &nbsp;·&nbsp; Final Year Project &nbsp;·&nbsp; 3-person team**
 
 > **Give it a satellite image of a real plot and one sentence — *“3-bedroom modern house with 2 bathrooms”* — and it generates a boundary-compliant, fully furnished 3D house you can walk through and edit in the browser.** Neural networks do what learning is best at — reading imagery and proposing architectural layouts — while deterministic, oracle-checked geometry owns everything a user can stand inside.
 
@@ -265,7 +380,7 @@ license:         open-to-opportunities
                Furnished · walkable · editable 3D house  →  glTF
 ```
 
-**⚡ Highlights**
+**Highlights**
 
 - **Training-free boundary-guided diffusion** — projects HouseDiffusion's clean estimate onto boundary-compliant layouts *inside* the sampling loop, so plans fit real, non-convex parcels with zero retraining
 - **Zero-shot plot extraction with SAM 2** — Web-Mercator GSD calibration turns map pixels into real metres, with construction setbacks applied automatically
@@ -284,10 +399,10 @@ license:         open-to-opportunities
 <br>
 
 <!-- ═════════════════════════ EXPERTISE ═════════════════════════ -->
-<p align="center"><a><img src="expertise.svg" width="100%" alt="Core expertise: Modeling, ML Systems, Reliable AI"/></a></p>
+<p align="center"><a><img src="expertise.svg" width="100%" alt="Core expertise. Modeling: deep neural architectures, transformers, sequence models, generative and diffusion models, deep reinforcement learning, classical ML. ML Systems: end-to-end pipelines, RAG and hybrid retrieval, distributed and federated training, real-time inference APIs, data engineering, MLOps. Reliable AI: rigorous evaluation, grounded LLM generation, uncertainty quantification, interpretability, privacy-preserving ML, efficient AI"/></a></p>
 
 <!-- ═════════════════════════ EXPLORING ═════════════════════════ -->
-<p align="center"><a><img src="exploring.svg" width="100%" alt="Currently exploring"/></a></p>
+<p align="center"><a><img src="exploring.svg" width="100%" alt="Currently exploring: generative AI for design, multimodal foundation models, efficient deep learning, reinforcement learning, distributed and federated learning, modern transformer architectures"/></a></p>
 
 <!-- ═════════════════════════ ANALYTICS ═════════════════════════ -->
 <p align="center"><a><img src="section-analytics.svg" width="100%" alt="GitHub Analytics"/></a></p>
