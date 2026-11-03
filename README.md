@@ -22,7 +22,7 @@ license:         open-to-opportunities
 <p align="center"><a><img src="experience.svg" width="100%" alt="Experience: AI/ML Intern at Nexus Technologies (Feb–Apr 2026, RAG-based conversational AI); Frontend Developer at Growthrune (Apr 2025–Feb 2026, led code reviews, real-time agentic AI features, 25% faster page load); Web Designer and Developer at Moboroid (May 2021–Jun 2023, 7+ client projects)"/></a></p>
 
 <!-- ═════════════════════════ TECH STACK ═════════════════════════ -->
-<p align="center"><a><img src="stack.svg" width="100%" alt="Tech stack. Languages: Python, C++, SQL, TypeScript, JavaScript, Java. ML and DL: PyTorch, TensorFlow, scikit-learn, XGBoost, MONAI, OpenCV, SHAP, Stable-Baselines3, Gymnasium. LLMs and retrieval: Hugging Face Transformers, Sentence Transformers, Ollama, pgvector. MLOps and cloud: Docker, GitHub Actions, MLflow, Weights and Biases, Evidently, Azure ML, Git, Linux. Data and streaming: pandas, NumPy, SciPy, PostgreSQL, SQLAlchemy, Apache Spark, Apache Kafka, RAPIDS, Delta Lake, GeoPandas. Backend and web: FastAPI, Node.js, WebSockets, React, Material-UI, three.js, Streamlit"/></a></p>
+<p align="center"><a><img src="stack.svg" width="100%" alt="Tech stack. Languages: Python, C++, SQL, TypeScript, JavaScript, Java. ML and DL: PyTorch, TensorFlow, scikit-learn, MONAI, OpenCV, SHAP, Stable-Baselines3, Gymnasium. LLMs and retrieval: Hugging Face Transformers, Sentence Transformers, Ollama, pgvector. MLOps and cloud: Docker, GitHub Actions, MLflow, Weights and Biases, Evidently, Azure ML, Git, Linux. Data and streaming: pandas, NumPy, SciPy, PostgreSQL, SQLAlchemy, Apache Spark, Apache Kafka, Delta Lake, GeoPandas. Backend and web: FastAPI, Node.js, WebSockets, React, Material-UI, three.js, Streamlit"/></a></p>
 
 <!-- ═════════════════════════ FEATURED WORK ═════════════════════════ -->
 <p align="center"><a><img src="section-featured.svg" width="100%" alt="Featured Work"/></a></p>
@@ -190,46 +190,50 @@ license:         open-to-opportunities
 </details>
 
 <details>
-<summary><b>CortexPI &nbsp;—&nbsp; Federated Learning for ICU Sepsis Detection</b></summary>
+<summary><b>VitalMesh &nbsp;—&nbsp; Federated Sepsis Early Warning for ICU Patients</b></summary>
 <br>
 
-> **A real-time, privacy-preserving clinical AI platform that predicts ICU patient deterioration across distributed hospital nodes — without a single patient record ever leaving its source hospital.** Engineered end-to-end across streaming data infrastructure, custom GPU kernels, state-of-the-art sequence models and federated optimization.
+> **A real-time, privacy-preserving early-warning system that streams ICU vitals and 12-lead ECG from five hospitals, scores every patient's sepsis risk every 30 seconds, and improves one shared model through federated learning — without a single patient record ever leaving its source hospital.** Every prediction ships with a calibrated range that holds the true value at least 90% of the time.
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────────────┐
-│                         CortexPI  ·  System Architecture                         │
+│                        VitalMesh  ·  System Architecture                         │
 ├──────────────────────────┬──────────────────────────┬────────────────────────────┤
-│     STREAM INGESTION     │  GPU STREAM PROCESSING   │     FEDERATED TRAINING     │
+│     STREAM INGESTION     │    STREAM PROCESSING     │     FEDERATED TRAINING     │
 │                          │                          │                            │
-│  Apache Kafka            │  RAPIDS cuDF + Spark     │  FedAvg + Differential     │
-│  exactly-once semantics  │  Structured Streaming    │  Privacy · 5 hospital      │
-│  live vitals + ECG feeds │  Delta Lake lakehouse    │  nodes · torchrun 2×T4     │
+│       Apache Kafka       │       Apache Spark       │   FedAvg + Differential    │
+│   5 hospital producers   │   Structured Streaming   │  Privacy · ε=1.0, δ=1e-5   │
+│   500 Hz ECG + vitals    │ Delta Lake · SIRS rules  │      5 hospital nodes      │
 ├──────────────────────────┴──────────────────────────┴────────────────────────────┤
 │                                DEEP LEARNING CORE                                │
 │                                                                                  │
 │      Mamba SSM ECG Encoder  ·  GRU-D Vitals Encoder  ·  Graph Attention Net      │
-│         Custom Triton Pan-Tompkins GPU Kernel  ·  EWC Continual Learning         │
-│               Conformal Prediction  ·  3 Clinical Prediction Heads               │
+│  Fusion MLP  ·  Uncertainty-Weighted Multi-Task Loss  ·  EWC Continual Learning  │
+│                   Conformal Prediction  ·  3 Prediction Heads                    │
 ├──────────────────────────────────────────────────────────────────────────────────┤
-│      OUTPUT → real-time deterioration risk + calibrated uncertainty bounds       │
+│  OUTPUT → sepsis risk (6 h) · stability 0–100 · ICU stay, each with a 90% range  │
 ├──────────────────────────────────────────────────────────────────────────────────┤
-│  Data: PhysioNet 2012 · PTB-XL        Compute: Apple M2 Pro · Kaggle dual-T4     │
+│    4 Kafka-decoupled services · circuit breaker · FastAPI + WebSocket · React    │
+│  Data: PhysioNet 2019 · PTB-XL     Compute: one Kaggle T4 · CPU / Apple Silicon  │
 └──────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 **Highlights**
 
-- **Mamba state-space ECG encoder** for long-range cardiac sequence modeling — outperforms LSTM baselines on irregular clinical time series
-- **GRU-D vitals encoder** with learned missingness decay, built for the extreme sparsity of real ICU data
-- **Custom Triton GPU kernel** running Pan-Tompkins QRS detection fully on-GPU — ECG preprocessing benchmarked at **2,400 ms → 31 ms (77× speedup)**
-- **FedAvg + Differential Privacy** across 5 hospital nodes with formal (ε, δ) privacy guarantees
-- **Graph Attention Network** modeling relational structure across clinical signals, driving **3 clinical prediction heads**
-- **EWC continual learning** that defends against catastrophic forgetting as patient populations drift
-- **Conformal prediction** wrapping every risk score in calibrated, distribution-free uncertainty bounds
-- **2-GPU pipeline parallelism** via `torchrun` on dual-T4 infrastructure, fed by an exactly-once Kafka → Spark → Delta Lake stream
-- **Distributed GPU inference** with parallel execution, targeting **sub-100 ms per-patient latency** across the streaming architecture
+- **Three predictions per patient every 30 s** from one forward pass — probability of sepsis within 6 hours, a 0–100 stability score and expected ICU stay
+- **Mamba state-space ECG encoder** models long 12-lead sequences in linear time, with a Transformer fallback on CPU and Apple Silicon
+- **GRU-D vitals encoder** models the time since each measurement instead of imputing, built for irregular, gappy ICU data
+- **Graph Attention Network** links patients with similar physiology so risk signals inform similar patients on the ward
+- **FedAvg + Differential Privacy** across 5 hospital nodes — each update is clipped and Gaussian-noised for **(ε = 1.0, δ = 10⁻⁵)** guarantees
+- **Conformal prediction** wraps every estimate in a distribution-free range with **≥ 90% coverage**, and an uncertainty-weighted loss balances the three tasks
+- **EWC continual learning** lets the model fine-tune on new patients without forgetting earlier ones
+- **Fault-tolerant streaming at 600,000 ECG samples/s** across 100 patients — Kafka → Spark Structured Streaming → Delta Lake, a SIRS rule engine that flags patients before the model runs, and four decoupled services with a circuit breaker on alerts
+- **Clinical React dashboard** with live ECG strips, per-patient risk ranges, federated-round tracking and system health against a 100 ms scoring budget
+- **Trained on real data** — PhysioNet 2019 (40,336 ICU stays) and PTB-XL (21,837 ECGs); the full federated loop runs on a single free Kaggle T4
 
-**Stack** &nbsp; `PyTorch` · `Mamba SSM` · `Triton` · `RAPIDS cuDF` · `Apache Spark` · `Apache Kafka` · `Delta Lake` · `Federated Learning`
+**Stack** &nbsp; `PyTorch` · `Mamba SSM` · `PyTorch Geometric` · `Opacus` · `Apache Kafka` · `Apache Spark` · `Delta Lake` · `FastAPI` · `React`
+
+**Code** &nbsp; [github.com/nooorf/VitalMesh](https://github.com/nooorf/VitalMesh)
 
 </details>
 
