@@ -421,7 +421,7 @@ license:         open-to-opportunities
 
 <!-- ═════════════════════════ FOOTER ═════════════════════════ -->
 <p align="center">
-  <a href="https://portfolio-nooorfs-projects.vercel.app/"><img src="btn-portfolio.svg" height="50" alt="Portfolio"/></a>
+  <a href="https://portfolio-kappa-one-4rz6p8p8o0.vercel.app/"><img src="btn-portfolio.svg" height="50" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/noorfatima4428/"><img src="btn-linkedin.svg" height="50" alt="LinkedIn"/></a>
   <a href="mailto:nfatima.bscs23seecs@seecs.edu.pk"><img src="btn-email.svg" height="50" alt="Email"/></a>
 </p>
